@@ -16,7 +16,7 @@ function gen(max) {
     var answer = x + y;
     return '<b id="' + (index++)
         + '" data-answer="' + answer + '"><i>' + x + '</i> + <i>' + y + '</i> = '
-        + '<input class="inputs">' + ' <img src="assets/images/check.svg"></b>';
+        + '<input class="inputs">' + ' <img src="../assets/images/mathematics/check.svg"></b>';
 }
 
 $(function () {
@@ -25,7 +25,7 @@ $(function () {
     document.head.appendChild(imported);
 
     var bg = Math.floor(Math.random() * 30);
-    $('body').attr('style', 'background: url("assets/images/bg/' + bg + '.jpg"); background-size:cover;');
+    $('body').attr('style', 'background: url("../assets/images/mathematics/bg/' + bg + '.jpg"); background-size:cover;');
 
     $(window).on('load', function () {
         var date = new Date();
@@ -46,17 +46,17 @@ $(function () {
             if (last.attr('data-answer') === $.trim(last.find('input').val().toString())) {
                 finishAhead = true;
             }
-            if (seconds === 0 || finishAhead) {
+            if (seconds === 597 || finishAhead) {
                 clearInterval(timer);
                 $('input').prop('disabled', true);
                 $('b').each(function () {
                     var answer = $(this).attr('data-answer');
                     var vicky = $.trim($(this).find('input').val());
                     if (vicky === answer) {
-                        $(this).find('img').attr('src', 'assets/images/check.svg');
+                        $(this).find('img').attr('src', '../assets/images/mathematics/check.svg');
                         score += 100 / amount;
                     } else {
-                        $(this).find('img').attr('src', 'assets/images/cross.svg')
+                        $(this).find('img').attr('src', '../assets/images/mathematics/cross.svg')
                     }
                     $(this).find('img').attr('style', 'display:inline');
                 });
@@ -68,7 +68,7 @@ $(function () {
                     $('#score').text(score + ' 分');
                 }
                 for (var i = 0; i < Math.floor(score / 20); i++) {
-                    $('<img src="assets/images/star.png">').appendTo($('#stars')).fadeIn(3000);
+                    $('<img src="../assets/images/mathematics/star.png">').appendTo($('#stars')).fadeIn(3000);
                 }
             }
         }, 1000);
