@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    font-family: Monaco, monospace;
+    font-size: 20px;
+}
+
+body {
+    background: url("../images/bg/0.jpg");
+    background-size: cover;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+span {
+    color: #900;
+    font-weight: bolder;
+}
+
+input {
+    background: cornsilk;
+    width: 140px;
+}
+
+img {
+    display: none;
+    width: 18px;
+}
+
+#score {
+    position: absolute;
+    right: 87px;
+    top: -7px;
+    color: #900;
+    font-family: Georgia, KaiTi, serif;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+#stars {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 300px;
+    height: 50px;
+}
+
+#stars img {
+    width: 50px;
+    float: left;
+}
+
+#container {
+    background: #fff;
+    width: 1002px;
+    margin: 10px auto 20px;
+    border: 1px solid #333;
+    /*box-shadow: 10px 10px 5px #888;*/
+    padding: 10px 0;
+}
+
+#datetime {
+    text-align: center;
+    font-size: .4em;
+    margin-top: 8px;
+    color: #999;
+}
+
+b {
+    display: inline-block;
+    float: left;
+    width: 318px;
+    padding: 0 8px;
+    margin: 3px 0;
+}
+
+i {
+    display: inline-block;
+    font-style: normal;
+    width: 30px;
+    text-align: right;
+}
+
+p {
+    height: 1.2em;
+    font-family: FangSong, serif;
+}
+
+@keyframes circle {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(6)
+    }
+}
+
+.circle {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border: 20px solid #fcd300;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    display: none;
+}
+
+.one {
+    animation: circle 5s infinite linear;
+}
+
+.two {
+    animation: circle 4s infinite linear;
+}
+
+.three {
+    animation: circle 3s infinite linear;
+}
+
+.four {
+    animation: circle 2s infinite linear;
+}
+
+.five {
+    animation: circle 1s infinite linear;
+}
