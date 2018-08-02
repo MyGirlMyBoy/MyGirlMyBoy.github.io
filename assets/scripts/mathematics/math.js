@@ -46,7 +46,7 @@ $(function () {
             if (last.attr('data-answer') === $.trim(last.find('input').val().toString())) {
                 finishAhead = true;
             }
-            if (seconds === 597 || finishAhead) {
+            if (seconds === 0 || finishAhead) {
                 clearInterval(timer);
                 $('input').prop('disabled', true);
                 $('b').each(function () {
