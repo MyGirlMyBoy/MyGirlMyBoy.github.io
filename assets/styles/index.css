@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+}
+
+main {
+    width: 1005px;
+    margin: auto;
+}
+
+header {
+    color: #fff;
+    /*font-family: 'Gruppo', cursive;*/
+    /*font-family: 'Yatra One', cursive;*/
+    /*font-family: 'Pompiere', cursive;*/
+    font-family: 'Elsie', cursive;
+    font-size: 72px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    background: hotpink;
+    margin-bottom: 5px;
+}
+
+footer {
+    color: #fff;
+    height: 200px;
+    background: darkblue;
+    text-align: center;
+    line-height: 200px;
+    margin-top: 5px;
+}
+
+#mathematics,
+#chinese,
+#english,
+#painting {
+    color: #fff;
+    font-family: KaiTi, serif;
+    font-size: 4em;
+    width: 500px;
+    height: 375px;
+    float: left;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 375px;
+}
+
+#mathematics:hover,
+#chinese:hover,
+#english:hover,
+#painting:hover {
+    opacity: .8;
+}
+
+.clear {
+    clear: both;
+}
+
+#mathematics {
+    background-image: url("../images/mathematics.png");
+}
+
+#chinese {
+    background-image: url("../images/chinese.png");
+}
+
+#english {
+    background-image: url("../images/english.png");
+}
+
+#painting {
+    background-image: url("../images/painting.png");
+}
+
+#mathematics,
+#english {
+    margin-right: 5px;
+}
+
+#mathematics,
+#chinese {
+    margin-bottom: 5px;
+}
