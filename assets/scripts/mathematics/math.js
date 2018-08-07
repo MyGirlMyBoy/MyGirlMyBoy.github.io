@@ -63,8 +63,8 @@ $(function () {
                 score = Math.round(score);
                 if (score === 100) {
                     $('#score').text('Vicky 得了满分！');
-                    $('.circle').show();
                 } else {
+                    $('.circle').show();
                     $('#score').text(score + ' 分');
                 }
                 for (var i = 0; i < Math.floor(score / 20); i++) {
