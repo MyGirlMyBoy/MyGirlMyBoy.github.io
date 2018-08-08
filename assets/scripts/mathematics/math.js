@@ -13,9 +13,15 @@ function timing() {
 function gen(max) {
     var x = Math.floor(Math.random() * max);
     var y = Math.floor(Math.random() * max);
-    var answer = x + y;
+    if (x >= y) {
+        var answer = x - y;
+        var opt = '-';
+    } else {
+        answer = x + y;
+        opt = '+';
+    }
     return '<b id="' + (index++)
-        + '" data-answer="' + answer + '"><i>' + x + '</i> + <i>' + y + '</i> = '
+        + '" data-answer="' + answer + '"><i>' + x + '</i> ' + opt + ' <i>' + y + '</i> = '
         + '<input class="inputs">' + ' <img src="../assets/images/mathematics/check.svg"></b>';
 }
 
@@ -63,8 +69,8 @@ $(function () {
                 score = Math.round(score);
                 if (score === 100) {
                     $('#score').text('Vicky 得了满分！');
-                } else {
                     $('.circle').show();
+                } else {
                     $('#score').text(score + ' 分');
                 }
                 for (var i = 0; i < Math.floor(score / 20); i++) {
