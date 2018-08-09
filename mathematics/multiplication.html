@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>乘法</title>
+    <style>
+
+        #title {
+            color: darkgreen;
+            font-family: KaiTi, serif;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        #square b {
+            color: #990000;
+            font-size: 30px;
+            line-height: 80px;
+            font-family: Georgia, KaiTi, serif;
+            display: inline-block;
+            width: 180px;
+            height: 80px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
-
+<div id="title">乘法口诀表</div>
+<div id="square"></div>
 <script src="../assets/scripts/jquery.min.js"></script>
-<script src="../assets/scripts/mathematics/math.js"></script>
+<!--<script src="../assets/scripts/mathematics/math.js"></script>-->
+<script>
+    $(function () {
+        for (var x = 1; x < 10; x++) {
+            for (var y = 1; y < 10; y++) {
+                $('#square').append('<b>' + x + ' × ' + y + ' = ' + (x * y) + '</b>')
+            }
+            $('#square').append('<br>');
+        }
+    });
+</script>
 </body>
 </html>
