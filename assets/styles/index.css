@@ -51,6 +51,7 @@ footer {
 #chinese:hover,
 #english:hover,
 #painting:hover {
+    cursor: pointer;
     opacity: .8;
 }
 
