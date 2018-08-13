@@ -13,9 +13,13 @@ function timing() {
 function gen(max) {
     var x = Math.floor(Math.random() * max);
     var y = Math.floor(Math.random() * max);
-    if (x >= y) {
-        var answer = x - y;
-        var opt = '-';
+    if ((x > 0 && x < 10) && (y > 0 && y < 10)) {
+        var answer = x * y;
+        var opt = '×';
+    }
+    else if (x >= y) {
+        answer = x - y;
+        opt = '-';
     } else {
         answer = x + y;
         opt = '+';
