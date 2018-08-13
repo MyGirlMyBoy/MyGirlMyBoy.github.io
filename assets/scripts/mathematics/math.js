@@ -13,9 +13,19 @@ function timing() {
 function gen(max) {
     var x = Math.floor(Math.random() * max);
     var y = Math.floor(Math.random() * max);
-    var answer = x + y;
+    if ((x > 0 && x < 10) && (y > 0 && y < 10)) {
+        var answer = x * y;
+        var opt = '×';
+    }
+    else if (x >= y) {
+        answer = x - y;
+        opt = '-';
+    } else {
+        answer = x + y;
+        opt = '+';
+    }
     return '<b id="' + (index++)
-        + '" data-answer="' + answer + '"><i>' + x + '</i> + <i>' + y + '</i> = '
+        + '" data-answer="' + answer + '"><i>' + x + '</i> ' + opt + ' <i>' + y + '</i> = '
         + '<input class="inputs">' + ' <img src="../assets/images/mathematics/check.svg"></b>';
 }
 

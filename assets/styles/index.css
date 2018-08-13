@@ -23,8 +23,11 @@ header {
 
 footer {
     color: #fff;
+    font-family: Georgia, KaiTi, serif;
+    font-size: larger;
     height: 200px;
     background: darkblue;
+    opacity: .8;
     text-align: center;
     line-height: 200px;
     margin-top: 5px;
@@ -36,19 +39,19 @@ footer {
 #painting {
     color: #fff;
     font-family: KaiTi, serif;
-    font-size: 4em;
+    font-size: 50px;
     width: 500px;
     height: 375px;
     float: left;
     background-repeat: no-repeat;
-    text-align: center;
-    line-height: 375px;
+    /*text-align: center;*/
 }
 
 #mathematics:hover,
 #chinese:hover,
 #english:hover,
 #painting:hover {
+    cursor: pointer;
     opacity: .8;
 }
 
@@ -80,4 +83,18 @@ footer {
 #mathematics,
 #chinese {
     margin-bottom: 5px;
+}
+
+
+#mathematics b,
+#chinese b,
+#english b,
+#painting b {
+    display:block;
+    margin-top: 295px;
+    height: 80px;
+    line-height: 80px;
+    opacity: .5;
+    padding-left: 20px;
+    background: #333333;
 }

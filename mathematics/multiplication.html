@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乘法口诀表</title>
+    <style>
+
+        .pink-bg {
+            background: hotpink;
+        }
+
+        .white-font {
+            color: #fff;
+        }
+
+        #title {
+            color: cornflowerblue;
+            font-family: KaiTi, serif;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 20px;
+        }
+
+        #square {
+            width: 1530px;
+            margin: auto;
+        }
+
+        #square b {
+            display: inline-block;
+            font-size: 30px;
+            line-height: 60px;
+            font-family: Georgia, KaiTi, serif;
+            border-collapse: collapse;
+            width: 160px;
+            height: 60px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            outline: 1px solid #999;
+            text-align: center;
+        }
+
+        b {
+            color: #990000;
+        }
+
+        span {
+            font-weight: bolder;
+            color: deeppink;
+            font-family: Georgia, serif;
+        }
+
+    </style>
+</head>
+<body>
+<div id="title">乘法口诀表 <span></span></div>
+<div id="square"></div>
+<script src="../assets/scripts/jquery.min.js"></script>
+<script>
+    $(function () {
+        var square = $('#square');
+        for (var x = 1; x < 10; x++) {
+            for (var y = 1; x >= y; y++) {
+                square.append('<b>' + y + ' × ' + x + ' = ' + (x * y) + '</b>');
+            }
+            square.append('<br>');
+        }
+
+        $('b').on('click', function () {
+            var n = $(this).text().substr(0, 1);
+            $('span').text(n);
+            $('b').each(function () {
+                $(this).removeClass('pink-bg white-font');
+                var x = $(this).text().substr(0, 1);
+                var y = $(this).text().substr(4, 1);
+                if (x === n || y === n) {
+                    $(this).addClass('pink-bg white-font');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

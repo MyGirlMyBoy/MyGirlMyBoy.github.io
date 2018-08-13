@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乘法</title>
+    <style>
+
+        .pink-bg {
+            background: hotpink;
+        }
+
+        .white-font {
+            color: #fff;
+        }
+
+        #title {
+            color: cornflowerblue;
+            font-family: KaiTi, serif;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        #square {
+            /*border: 6px double #333333;*/
+            margin-top: 100px;
+            margin-left: 20px;
+
+        }
+
+        #square b {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 40px;
+            font-family: Georgia, KaiTi, serif;
+            border-collapse: collapse;
+            width: 110px;
+            height: 40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            outline: 1px solid #999;
+            text-align: center;
+        }
+
+        b {
+            color: #990000;
+        }
+    </style>
+</head>
+<body>
+<div id="title">乘法口诀表  <b style="color:deeppink;font-family: Georgia,serif;">9</b></div>
+<div id="square"></div>
+<small style="display: block; text-align: right; margin-right: 18px; color: #999;">2018-08-09</small>
+<script src="../assets/scripts/jquery.min.js"></script>
+<!--<script src="../assets/scripts/mathematics/math.js"></script>-->
+<script>
+    $(function () {
+        for (var x = 1; x < 10; x++) {
+            for (var y = 1; x >= y; y++) {
+                if (x === 9 || y === 9) {
+                    $('#square').append('<b class="pink-bg white-font">' + y + ' × ' + x + ' = ' + (x * y) + '</b>');
+                } else {
+                    $('#square').append('<b>' + y + ' × ' + x + ' = ' + (x * y) + '</b>');
+                }
+            }
+            $('#square').append('<br>');
+        }
+    });
+</script>
+</body>
+</html>

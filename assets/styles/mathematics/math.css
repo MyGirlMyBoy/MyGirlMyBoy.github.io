@@ -105,7 +105,9 @@ p {
     margin: 0 auto;
     width: 300px;
     height: 300px;
-    border: 20px solid #fcd300;
+    border: 20px dotted rgba(252, 211, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     border-radius: 50%;
     position: absolute;
     top: 5%;
